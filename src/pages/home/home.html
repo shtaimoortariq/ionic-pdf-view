@@ -10,19 +10,20 @@
 </ion-header>
 
 <ion-content padding>
-	<h1>welcome to the home page</h1>
+	<!-- <h1>welcome to the home page</h1>
 	<ion-list>
-		<button ion-item (click)="itemSelected(item)">
+		<button ion-item (click)="itemSelect()">
 			list 1
 		</button>
-		<button ion-item (click)="itemSelected(item)">
+		<button ion-item (click)="itemSelect()">
 			list 1
 		</button>
-		<button ion-item (click)="itemSelected(item)">
+		<button ion-item (click)="itemSelect()">
 			list 1
 		</button>
 
-	</ion-list>
+	
+	</ion-list> -->
 	<!-- <ion-menu [content]="mycontent">
 		<ion-content>
 			<ion-list>
@@ -32,4 +33,27 @@
 	</ion-menu> -->
 
 	<!-- <ion-nav #mycontent [root]="rootPage"></ion-nav> -->
+	<button ion-button (click)="previousPage()">Previous</button>
+	<button ion-button (click)="nextPage()">Next</button>
+	
+	<div #viewerContainer class="viewer-container">
+		<div #viewer class="viewer">
+			<ng-container #pagesContainer>
+				<div #pageContainer class="page" [style.width.px]="pageContainerUnique.width" [style.height.px]="pageContainerUnique.height">
+					<div class="canvas-wrapper" #canvasWrapper>
+						<canvas class="page-canvas" #canvas></canvas>
+					</div>
+					<div #textContainer class="text-layer selectable">
+					</div>
+				</div>
+			</ng-container>
+		</div>
+	</div>
 </ion-content>
+
+
+
+
+<!-- <ion-content padding>
+	
+</ion-content> -->

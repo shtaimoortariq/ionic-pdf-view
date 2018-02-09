@@ -10,37 +10,47 @@ import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { Test1Page } from '../pages/test1/test1';
+
+import { DocumentViewer } from '@ionic-native/document-viewer';
+import { FileOpener } from '@ionic-native/file-opener';
+
 
 @NgModule({
   declarations: [
     MyApp,
-	HomePage,
-	LoginPage,
-	SignupPage
+    HomePage,
+    LoginPage,
+    SignupPage,
+    Test1Page
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-	HomePage,
-	LoginPage,
-	SignupPage
+    HomePage,
+    LoginPage,
+    SignupPage,
+    Test1Page
   ],
   providers: [
-	Camera,
-	File,
-    Transfer,
+    Camera,
+    File,
+    Transfer, 
     FilePath,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    DocumentViewer,
+    FileOpener,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
