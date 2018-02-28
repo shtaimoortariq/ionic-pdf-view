@@ -14,5 +14,9 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let book of books; let i = index" (click)="itemSelected(book, i)">
+      {{ book.name }}
+    </button>  
+  </ion-list>
 </ion-content>

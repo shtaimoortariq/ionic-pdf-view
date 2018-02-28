@@ -6,10 +6,62 @@
 		<ion-title>
 			Ionic Blank
 		</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-only color="royal" (click)="showItemList()">
+				<ion-icon name="folder"></ion-icon>
+			</button>
+		</ion-buttons>
 	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+
+	<div *ngIf="showList">
+		<ion-list>
+			<button ion-item *ngFor="let book of books; let i = index" (click)="itemSelected(i)">
+				{{ book.name }}
+			</button>
+		</ion-list>
+	</div>
+
+
+	<div *ngIf="!showList">
+
+		<!-- <pdf-viewer [src]="bookLocation" [render-text]="true" [original-size]="false" [zoom]="1.0" [fit-to-page]="true" [autoresize]="true"
+		 style="display: block;"></pdf-viewer> -->
+
+
+
+		<div>
+			<img [src]="bookLocation" (swipe)="tapEvent($event)">
+		</div>
+
+
+		<ion-list>
+			<audio-track #audio *ngFor="let track of myTracks" [track]="track" (onFinish)="onTrackFinished($event)">
+				<ion-item>
+					<ion-thumbnail item-left>
+						
+						<audio-track-play dark [audioTrack]="audio">
+							<ion-spinner></ion-spinner>
+						</audio-track-play>
+					</ion-thumbnail>
+					<div item-content style="width:100%">
+						<p>
+							
+						</p>
+						<audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"></audio-track-progress-bar>
+					</div>
+				</ion-item>
+			</audio-track>
+		</ion-list>
+
+
+
+	</div>
+
 	<!-- <h1>welcome to the home page</h1>
 	<ion-list>
 		<button ion-item (click)="itemSelect()">
@@ -33,22 +85,45 @@
 	</ion-menu> -->
 
 	<!-- <ion-nav #mycontent [root]="rootPage"></ion-nav> -->
-	<button ion-button (click)="previousPage()">Previous</button>
+	<!-- <button ion-button (click)="previousPage()">Previous</button>
 	<button ion-button (click)="nextPage()">Next</button>
-	
-	<div #viewerContainer class="viewer-container">
+	<p>{{pla}}</p> -->
+
+	<!-- <iframe *ngIf="pdfLink" [src]="pdfLink" width="100%" height="100%" frameborder="0" ></iframe> -->
+
+	<!-- <audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
+		<ion-item>  
+		  <ion-thumbnail item-left>
+			<img src="{{audio.art}}">
+			<audio-track-play dark [audioTrack]="audio"><ion-spinner></ion-spinner></audio-track-play>  
+		  </ion-thumbnail>
+		  <div item-content style="width:100%">
+			<p><strong>{{audio.title}}</strong> ⚬ <em>{{audio.artist}}</em></p>
+			<audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"></audio-track-progress-bar>
+		  </div>
+		</ion-item>    
+	  </audio-track> -->
+
+
+
+
+	<!-- <div #viewerContainer class="viewer-container">
 		<div #viewer class="viewer">
 			<ng-container #pagesContainer>
 				<div #pageContainer class="page" [style.width.px]="pageContainerUnique.width" [style.height.px]="pageContainerUnique.height">
+
 					<div class="canvas-wrapper" #canvasWrapper>
 						<canvas class="page-canvas" #canvas></canvas>
+
 					</div>
 					<div #textContainer class="text-layer selectable">
 					</div>
 				</div>
 			</ng-container>
 		</div>
-	</div>
+	</div> -->
+
+
 </ion-content>
 
 
