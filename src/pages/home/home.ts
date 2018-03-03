@@ -277,7 +277,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/timeout';
 import { Observable } from 'rxjs/Observable';
 import { log } from 'util';
-
+import { ITrackConstraint } from 'ionic-audio';
 
 
 @Component({
@@ -309,6 +309,22 @@ export class HomePage {
 		{ name: "Book 41", length1: 15 }, { name: "Book 42", length1: 14 }, { name: "Book 43", length1: 14 }, { name: "Book 44", length1: 15 }
 	]
 
+	booksSound = [
+		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F0.mp3?alt=media&token=0b84364b-3ba9-4ada-9075-c52177d36ab0',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F1.mp3?alt=media&token=f10bff45-9636-4f2f-ba4f-2fcc4f0fd72f',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F2.mp3?alt=media&token=e7789882-9c38-45e1-ac4a-93f5df18f83c',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F3.mp3?alt=media&token=3e1d2478-f2c7-41e3-b0b5-0c6437ba32fc',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F4.mp3?alt=media&token=0eb96957-032e-44c0-8e1a-4d044c11b4f3',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F5.mp3?alt=media&token=b1b817b9-a3f1-4ae6-8eaa-b2ab1da64e5b',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F6.mp3?alt=media&token=33ef2081-b6ef-49db-9390-4a7a44a78f49'],
+		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F0.mp3?alt=media&token=b7b84556-d1bf-4ba2-9235-a4ae95600d49',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F1.mp3?alt=media&token=6d0e889e-9801-401a-a226-6b9622df0ce4',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F2.mp3?alt=media&token=2cf1e744-b639-4dae-8a0e-9a20244a547b',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F3.mp3?alt=media&token=f094d176-5551-4ba6-9c62-b45dbc0aa347',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F4.mp3?alt=media&token=a4d8ee65-90b5-4b80-9752-54d9870bad66',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F4.mp3?alt=media&token=a4d8ee65-90b5-4b80-9752-54d9870bad66',
+			'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F4.mp3?alt=media&token=a4d8ee65-90b5-4b80-9752-54d9870bad66']
+	]
 	@ViewChild(Nav) nav: Nav;
 	isHomeNav: boolean = true;
 	constructor(private menu: MenuController,
@@ -332,22 +348,30 @@ export class HomePage {
 		}, 1000);
 
 
+
 		this.myTracks = [{
-			src: 'gs://audio-pdf-app.appspot.com/3/0.mp3',
+			src: 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F0.mp3?alt=media&token=0b84364b-3ba9-4ada-9075-c52177d36ab0',
 			preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
 		}];
 
 
-		const ref = this.storage.ref('3/0.mp3');
-		this.profileUrl = ref.getDownloadURL()
-		this.profileUrl.subscribe(data => {
-			console.log(data);
-			this.myTracks[0].src = data;
-		})
-		console.log(this.profileUrl);
+		// {
+		// 	src: 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F2.mp3?alt=media&token=e7789882-9c38-45e1-ac4a-93f5df18f83c',
+		// 	preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
+		// }
+
+		// const ref = this.storage.ref('book1/0.mp3');
+		// this.profileUrl = ref.getDownloadURL()
+		// this.profileUrl.subscribe(data => {
+		// 	console.log(data);
+		// 	this.myTracks[0].src = data;
+		// })
+		// console.log(this.profileUrl);
 
 	}
 	itemSelected(index) {
+		console.log(index);
+		
 		this.currentPic = 1;
 		let len = index + 1;
 		this.audioIndex = index;
@@ -355,10 +379,15 @@ export class HomePage {
 		this.bookName = "Book " + len;
 		console.log(this.bookName);
 		this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
-		this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/' + this.audioIndex + '/' + this.currentPic + ".mp3";
+		let book = "book" + len + "url" + index;
+		//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];
+		//this.myTracks[0].src = 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F2.mp3?alt=media&token=2cf1e744-b639-4dae-8a0e-9a20244a547b';
+		console.log(this.myTracks[0]);
 
-		console.log(index);
-		console.log(this.books[index]);
+
+
+		console.log(this.audioIndex);
+		console.log(this.books);
 		this.showList = false;
 
 	}
@@ -369,9 +398,10 @@ export class HomePage {
 	}
 
 	playSelectedTrack() {
-		alert("playSelectedTrack")
+		console.log("playSelectedTrack")
 		// use AudioProvider to control selected track 
 		this._audioProvider.play(this.selectedTrack);
+
 	}
 
 	pauseSelectedTrack() {
@@ -407,7 +437,13 @@ export class HomePage {
 		if (this.currentPic > 1) {
 			this.currentPic = this.currentPic - 1;
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
-			this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/' + this.audioIndex + '/' + this.currentPic + ".mp3";
+			//	this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/'+ 'book' + this.audioIndex + '/' + this.currentPic + ".mp3";
+			//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];
+			console.log(this.myTracks[0].src);
+			this.myTracks[0] = {
+				src: this.booksSound[this.audioIndex][this.currentPic - 1],
+				preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
+			}
 		}
 	}
 
@@ -416,7 +452,13 @@ export class HomePage {
 		if (this.currentPic < this.books[this.currentBookIndex].length1) {
 			this.currentPic = this.currentPic + 1;
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
-			this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/' + this.audioIndex + '/' + this.currentPic + ".mp3";
+			//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];
+			this.myTracks[0] = {
+				src: this.booksSound[this.audioIndex][this.currentPic - 1],
+				preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
+			}
+
+			//	this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/' + 'book'+ this.audioIndex + '/' + this.currentPic + ".mp3";
 		}
 	}
 
