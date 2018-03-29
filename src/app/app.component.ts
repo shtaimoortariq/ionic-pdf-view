@@ -11,6 +11,10 @@ import { FilePath } from '@ionic-native/file-path';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { AboutPage } from '../pages/about/about';
+
+
+
 @Component({
 	templateUrl: 'app.html',
 })
@@ -83,11 +87,17 @@ closeMenu(){
 	this.isHomePage  = true;
 	
 }
-  openPage(page) {
+openPageHome() {
 	  console.log("openPage");	
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }
+		this.nav.setRoot(HomePage);
+		this.closeMenu();
+	}
+	
+	openAboutPage() { 
+		this.nav.setRoot(AboutPage);
+		this.closeMenu();
+	}
 }
 

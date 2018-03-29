@@ -19,6 +19,8 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { Test1Page } from '../pages/test1/test1';
+import { AboutPage } from '../pages/about/about';
+
 
 import { DocumentViewer } from '@ionic-native/document-viewer';
 import { FileOpener } from '@ionic-native/file-opener';
@@ -53,6 +55,7 @@ export function myCustomAudioProviderFactory() {
     HomePage,
     LoginPage,
     SignupPage,
+    AboutPage,
     Test1Page
   ],
   imports: [
@@ -72,6 +75,7 @@ export function myCustomAudioProviderFactory() {
     HomePage,
     LoginPage,
     SignupPage,
+    AboutPage,
     Test1Page
   ],
   providers: [
