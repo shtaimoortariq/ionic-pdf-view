@@ -1,24 +1,24 @@
-<ion-header>
+<ion-header style="background: transparent">
 	<ion-navbar>
-		<button (click)="closeMenu()" ion-button menuToggle>
-			<ion-icon name="menu"></ion-icon>
+		<button (click)="closeMenu()" ion-button menuToggle style="color:green">
+			<ion-icon name="menu" style="color:green"></ion-icon>
 		</button>
 		<ion-title>
-			Home
+			<span style="color:green">Home</span>
 		</ion-title>
 
 		<ion-buttons end>
 			<button ion-button icon-only color="royal" (click)="showItemList()">
-				<ion-icon name="folder"></ion-icon>
+				<ion-icon name="md-arrow-round-back"></ion-icon>
 			</button>
 		</ion-buttons>
 	</ion-navbar>
 </ion-header>
 
-<ion-content padding style="background-color: yellowgreen">
+<ion-content padding style="background-image: url('assets/imgs/bg_home.jpg');background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
 
 
-	<div *ngIf="showList" style="display: flex;flex-direction: row;flex-wrap: wrap; justify-content:center; align-items:center;">
+	<div *ngIf="showList" style="display: flex;flex-direction: row;flex-wrap: wrap; justify-content:center; align-items:center;height: 450px;overflow: auto;">
 		<!-- <ion-list>
 			<button ion-item *ngFor="let book of books; let i = index" (click)="itemSelected(i)">
 				{{ book.name }}
@@ -54,7 +54,7 @@
 
 		<ion-list>
 			<audio-track #audio *ngFor="let track of myTracks" [track]="track" (onFinish)="onTrackFinished($event)">
-				<ion-item style="background-color: yellowgreen">
+				<ion-item style="background: transparent">
 					<ion-thumbnail item-left>
 
 						<audio-track-play dark [audioTrack]="audio">
@@ -62,9 +62,7 @@
 						</audio-track-play>
 					</ion-thumbnail>
 					<div item-content style="width:100%">
-						<p>
 
-						</p>
 						<audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"></audio-track-progress-bar>
 					</div>
 				</ion-item>

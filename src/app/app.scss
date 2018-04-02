@@ -17,7 +17,9 @@
 
 
 .app-content{
-	background: linear-gradient(#F78D53, #F45F73);
+	// background: linear-gradient(#F78D53, #F45F73);
+	background: linear-gradient(rgb(158, 236, 171), rgb(37, 221, 37));
+	
 }
 .image-container{
 	width: 15%;
@@ -90,4 +92,9 @@
 
 body{
 	::-webkit-scrollbar{ display:none; } 
+}
+
+
+ion-content {
+    background-image: url('assets/img/background.jpg');
 }
