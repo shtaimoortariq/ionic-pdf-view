@@ -18,7 +18,7 @@
 <ion-content padding style="background-image: url('assets/imgs/bg_home.jpg');background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
 
 
-	<div *ngIf="showList" style="display: flex;flex-direction: row;flex-wrap: wrap; justify-content:center; align-items:center;height: 450px;overflow: auto;">
+	<div *ngIf="showList" style="display: flex;flex-direction: row;flex-wrap: wrap; justify-content:center; align-items:center;height: 460px;overflow: auto;">
 		<!-- <ion-list>
 			<button ion-item *ngFor="let book of books; let i = index" (click)="itemSelected(i)">
 				{{ book.name }}
@@ -28,7 +28,7 @@
 
 		<div *ngFor="let book of books; let i = index" (click)="itemSelected(i)">
 			<div class="card1">
-				<img src="assets/imgs/book2.png" />
+				<img src="assets/bookTitle/book {{i+1}}.png" />
 				<div style="color:black;display:flex; 
 				justify-content:center; 
 				align-items:center;">{{book.name}}</div>
@@ -47,8 +47,9 @@
 
 
 
-		<div>
-			<img [src]="bookLocation" (swipe)="tapEvent($event)">
+		<div style="display: flex;
+		justify-content: center">
+			<img [src]="bookLocation" (swipe)="tapEvent($event)" style="height: 358px;">
 		</div>
 
 

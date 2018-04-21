@@ -300,9 +300,10 @@ export class HomePage {
 	myTracks: any[];
 	allTracks: any[];
 	selectedTrack: any;
+	
 
 	books = [
-		{ name: "Book 1", length1: 18 }, { name: "Book 2", length1: 18 }, { name: "Book 3", length1: 18 }, { name: "Book 4", length1: 18 }, { name: "Book 5", length1: 18 }, { name: "Book 6", length1: 18 }, { name: "Book 7", length1: 18 }, { name: "Book 8", length1: 15 }, { name: "Book 9", length1: 18 }, { name: "Book 10", length1: 18 },
+		{ name: "Book 1", length1: 18, img: "assets/bookTitle/book 1.png" }, { name: "Book 2", length1: 18 }, { name: "Book 3", length1: 18 }, { name: "Book 4", length1: 18 }, { name: "Book 5", length1: 18 }, { name: "Book 6", length1: 18 }, { name: "Book 7", length1: 18 }, { name: "Book 8", length1: 15 }, { name: "Book 9", length1: 18 }, { name: "Book 10", length1: 18 },
 		{ name: "Book 11", length1: 18 }, { name: "Book 12", length1: 18 }, { name: "Book 13", length1: 18 }, { name: "Book 14", length1: 18 }, { name: "Book 15", length1: 14 }, { name: "Book 16", length1: 14 }, { name: "Book 17", length1: 14 }, { name: "Book 18", length1: 14 }, { name: "Book 19", length1: 14 }, { name: "Book 20", length1: 14 },
 		{ name: "Book 21", length1: 14 }, { name: "Book 22", length1: 14 }, { name: "Book 23", length1: 14 }, { name: "Book 24", length1: 14 }, { name: "Book 25", length1: 14 }, { name: "Book 26", length1: 14 }, { name: "Book 27", length1: 14 }, { name: "Book 28", length1: 14 }, { name: "Book 29", length1: 14 }, { name: "Book 30", length1: 14 },
 		{ name: "Book 31", length1: 14 }, { name: "Book 32", length1: 14 }, { name: "Book 33", length1: 14 }, { name: "Book 34", length1: 14 }, { name: "Book 35", length1: 14 }, { name: "Book 36", length1: 15 }, { name: "Book 37", length1: 14 }, { name: "Book 38", length1: 14 }, { name: "Book 39", length1: 14 }, { name: "Book 40", length1: 14 },
