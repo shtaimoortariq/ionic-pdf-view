@@ -300,6 +300,7 @@ export class HomePage {
 	myTracks: any[];
 	allTracks: any[];
 	selectedTrack: any;
+	showplay: boolean = true;
 	
 
 	books = [
@@ -468,22 +469,36 @@ export class HomePage {
 	prev() {
 
 		if (this.currentPic > 1) {
+			console.log(this.currentPic);
+			if(this.currentPic == 3) {
+				this.showplay = false;
+			} else {
+				this.showplay = true;
+			} 
 			this.currentPic = this.currentPic - 1;
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
 			//	this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/'+ 'book' + this.audioIndex + '/' + this.currentPic + ".mp3";
 			//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];
-			console.log(this.myTracks[0].src);
+			// console.log(this.myTracks[0].src);
 			this.myTracks[0] = {
 				src: this.booksSound[this.audioIndex][this.currentPic - 1],
 				preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
 			}
-			console.log(this.myTracks[0])
+			// console.log(this.myTracks[0])
 		}
 	}
 
 	next() {
 
 		if (this.currentPic < this.books[this.audioIndex].length1) {
+
+			console.log(this.currentPic);
+			if(this.currentPic == 1) {
+				this.showplay = false;
+			} else {
+				this.showplay = true;
+			} 
+			
 			this.currentPic = this.currentPic + 1;
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
 			//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];

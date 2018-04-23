@@ -4,7 +4,7 @@
 			<ion-icon name="menu" style="color:green"></ion-icon>
 		</button>
 		<ion-title>
-			<span style="color:green">Home</span>
+			<span style="color:green">د کوچنیانو کتابونه</span>
 		</ion-title>
 
 		<ion-buttons end>
@@ -53,9 +53,9 @@
 		</div>
 
 
-		<ion-list>
+		<ion-list *ngIf="showplay">
 			<audio-track #audio *ngFor="let track of myTracks" [track]="track" (onFinish)="onTrackFinished($event)">
-				<ion-item style="background: transparent">
+				<ion-item style="background: transparent;border-bottom-color: transparent">
 					<ion-thumbnail item-left>
 
 						<audio-track-play dark [audioTrack]="audio">
