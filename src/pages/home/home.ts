@@ -279,7 +279,6 @@ import { Observable } from 'rxjs/Observable';
 import { log } from 'util';
 import { ITrackConstraint } from 'ionic-audio';
 
-
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html',
@@ -301,7 +300,8 @@ export class HomePage {
 	allTracks: any[];
 	selectedTrack: any;
 	showplay: boolean = true;
-	
+	styleExp;
+
 
 	books = [
 		{ name: "Book 1", length1: 18, img: "assets/bookTitle/book 1.png" }, { name: "Book 2", length1: 18 }, { name: "Book 3", length1: 18 }, { name: "Book 4", length1: 18 }, { name: "Book 5", length1: 18 }, { name: "Book 6", length1: 18 }, { name: "Book 7", length1: 18 }, { name: "Book 8", length1: 15 }, { name: "Book 9", length1: 18 }, { name: "Book 10", length1: 18 },
@@ -383,6 +383,33 @@ export class HomePage {
 		}, 1000);
 
 
+
+		pf.ready().then((readySource) => {
+			console.log('Width: ' + pf.width());
+			console.log('Height: ' + pf.height());
+
+			let height = pf.height();
+
+			let height1 = height - 575;
+			let height2 = height1 * 0.66;
+			let height3 = height2 + 300;
+			this.styleExp = "" + height3 + "px";
+			console.log("style", this.styleExp);
+			
+
+			// if (height >= 350 && height < 670) {
+			// 	console.log('Condition 1 True ------------>');
+				
+			// 	this.styleExp = '355px';
+			// }
+
+			// if(height >= 670 && height < 751) {
+
+			// 	console.log('Condition 2 True ------------>');
+			// 	this.styleExp = '410px';
+
+			// }
+		});
 
 		this.myTracks = [{
 			src: 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book1%2F0.mp3?alt=media&token=0b84364b-3ba9-4ada-9075-c52177d36ab0',
@@ -470,11 +497,11 @@ export class HomePage {
 
 		if (this.currentPic > 1) {
 			console.log(this.currentPic);
-			if(this.currentPic == 3) {
+			if (this.currentPic == 3) {
 				this.showplay = false;
 			} else {
 				this.showplay = true;
-			} 
+			}
 			this.currentPic = this.currentPic - 1;
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
 			//	this.myTracks[0].src = 'gs://audio-pdf-app.appspot.com/'+ 'book' + this.audioIndex + '/' + this.currentPic + ".mp3";
@@ -493,12 +520,12 @@ export class HomePage {
 		if (this.currentPic < this.books[this.audioIndex].length1) {
 
 			console.log(this.currentPic);
-			if(this.currentPic == 1) {
+			if (this.currentPic == 1) {
 				this.showplay = false;
 			} else {
 				this.showplay = true;
-			} 
-			
+			}
+
 			this.currentPic = this.currentPic + 1;
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
 			//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];

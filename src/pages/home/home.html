@@ -49,7 +49,7 @@
 
 		<div style="display: flex;
 		justify-content: center">
-			<img [src]="bookLocation" (swipe)="tapEvent($event)" style="height: 358px;">
+			<img [src]="bookLocation" (swipe)="tapEvent($event)" [ngStyle]="{'height': styleExp}">
 		</div>
 
 
@@ -58,13 +58,15 @@
 				<ion-item style="background: transparent;border-bottom-color: transparent">
 					<ion-thumbnail item-left>
 
-						<audio-track-play dark [audioTrack]="audio">
+						<audio-track-play dark [audioTrack]="audio" style="position: relative;
+						top: 38px;
+						left: 120px;">
 							<ion-spinner></ion-spinner>
 						</audio-track-play>
 					</ion-thumbnail>
 					<div item-content style="width:100%">
 
-						<audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"></audio-track-progress-bar>
+						<audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"  style="position: relative;bottom: 20px;right: 65px;"></audio-track-progress-bar>
 					</div>
 				</ion-item>
 			</audio-track>
@@ -72,6 +74,24 @@
 
 
 
+		<!-- <ion-list *ngIf="showplay">
+			<audio-track #audio *ngFor="let track of myTracks" [track]="track" (onFinish)="onTrackFinished($event)">
+				<ion-item style="background: transparent;border-bottom-color: transparent">
+					<ion-thumbnail item-left>
+
+						<audio-track-play dark [audioTrack]="audio" style="position: relative;
+						top: 38px;
+						left: 120px;">
+							<ion-spinner></ion-spinner>
+						</audio-track-play>
+					</ion-thumbnail>
+					<div item-content style="width:100%">
+
+						<audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"  style="position: relative;bottom: 20px;right: 65px;"></audio-track-progress-bar>
+					</div>
+				</ion-item>
+			</audio-track>
+		</ion-list> -->
 
 
 	</div>
