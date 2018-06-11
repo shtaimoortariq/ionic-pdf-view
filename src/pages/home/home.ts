@@ -308,7 +308,7 @@ export class HomePage {
 		{ name: "Book 11", length1: 18 }, { name: "Book 12", length1: 18 }, { name: "Book 13", length1: 18 }, { name: "Book 14", length1: 18 }, { name: "Book 15", length1: 14 }, { name: "Book 16", length1: 14 }, { name: "Book 17", length1: 14 }, { name: "Book 18", length1: 14 }, { name: "Book 19", length1: 14 }, { name: "Book 20", length1: 14 },
 		{ name: "Book 21", length1: 14 }, { name: "Book 22", length1: 14 }, { name: "Book 23", length1: 14 }, { name: "Book 24", length1: 14 }, { name: "Book 25", length1: 14 }, { name: "Book 26", length1: 14 }, { name: "Book 27", length1: 14 }, { name: "Book 28", length1: 14 }, { name: "Book 29", length1: 14 }, { name: "Book 30", length1: 14 },
 		{ name: "Book 31", length1: 14 }, { name: "Book 32", length1: 14 }, { name: "Book 33", length1: 14 }, { name: "Book 34", length1: 14 }, { name: "Book 35", length1: 14 }, { name: "Book 36", length1: 15 }, { name: "Book 37", length1: 14 }, { name: "Book 38", length1: 14 }, { name: "Book 39", length1: 14 }, { name: "Book 40", length1: 14 },
-		{ name: "Book 41", length1: 15 }, { name: "Book 42", length1: 14 }, { name: "Book 43", length1: 14 }, { name: "Book 44", length1: 15 }
+		{ name: "Book 41", length1: 15 }, { name: "Book 42", length1: 14 }, { name: "Book 43", length1: 14 }, { name: "Book 44", length1: 15 } ,     { name: "Book 45", length1: 38 }
 	]
 
 	booksSound = [
@@ -356,8 +356,25 @@ export class HomePage {
 		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F0.mp3?alt=media&token=19bbb68f-517e-4db1-a2db-f4b5f87c75eb', '','https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F1.mp3?alt=media&token=73cc9876-8cbc-432a-bce6-31914671a9c1', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F2.mp3?alt=media&token=1930d7f0-bc96-40ab-9548-ddab0eb93ae8', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F2.mp3?alt=media&token=1930d7f0-bc96-40ab-9548-ddab0eb93ae8', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F4.mp3?alt=media&token=ffcb7630-b1d9-4fdc-9845-823ec33b3a3c', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F5.mp3?alt=media&token=0450a994-8427-4bf1-8e7e-20238da86461', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F6.mp3?alt=media&token=99d25d0d-a39a-432e-988b-bb471abfe605', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F7.mp3?alt=media&token=1d94fa9b-29a4-4766-b049-c5fa316d45bc', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F8.mp3?alt=media&token=cdf37f71-41e1-4d5c-ab34-075cc66ea0c3', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F9.mp3?alt=media&token=7fef95ef-8297-44c7-9eeb-4e1ffd75b325', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F10.mp3?alt=media&token=1f87d5b6-5a94-4183-9f5c-6ed50b7a8535', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book42%2F11.mp3?alt=media&token=6d002c33-269b-4a30-ad30-4849526502c4'],
 		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F0.mp3?alt=media&token=2e6709c7-f580-41d1-9481-0caa1dec4514', '','https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F1.mp3?alt=media&token=a5b0ab9c-f338-4077-8175-7787f0da5ad7', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F2.mp3?alt=media&token=0a1d62cf-7914-415c-a304-68589e1813a9', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F3.mp3?alt=media&token=100d9f5e-60f5-4bc1-b488-7307ec6540ec', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F4.mp3?alt=media&token=d69728da-967c-42e1-87a7-c97ed8c3261f', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F5.mp3?alt=media&token=b278201d-7db8-41e1-a100-1df4542a4584', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F6.mp3?alt=media&token=9b14d5df-a441-4cfa-96fc-cf450a6d30e2', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F7.mp3?alt=media&token=242717b7-52d8-4f0c-bc90-59c0a78f858a', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F8.mp3?alt=media&token=35f517cf-6dfb-4c07-8eb9-84f509f0b1c8', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F9.mp3?alt=media&token=270ccbe3-10e6-438b-a4f3-7bad1b18557e', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F10.mp3?alt=media&token=57b58e1c-fc0b-413a-971a-e1bb50239bce', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book43%2F11.mp3?alt=media&token=26f61d34-d860-44c7-9cdb-9f065ade3d19'],
 		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F0.mp3?alt=media&token=e53302c5-a7fd-470d-bc94-6b322bfc3202', '','https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F1.mp3?alt=media&token=8e7d693a-520c-4cef-b876-6714047ab599', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F2.mp3?alt=media&token=432cff68-c0e2-401a-b4e5-8e8db525e051', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F3.mp3?alt=media&token=7141410b-a9e7-486f-a4ea-1c693354fc1f', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F4.mp3?alt=media&token=06161abe-44c3-456c-82b0-b98fb5efc0ed', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F5.mp3?alt=media&token=3d023b7b-2df8-4918-89fd-b0901dd28fe8', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F6.mp3?alt=media&token=7faf5046-1ba4-4ce0-983c-302ad82ddeb3', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F7.mp3?alt=media&token=e929a79e-93be-41d6-93c3-ef8548240c66', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F8.mp3?alt=media&token=db92c8a3-5cc0-4df6-aa86-9136127f781b', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F9.mp3?alt=media&token=649e2512-ce78-453b-8132-c8cf894c06df', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F10.mp3?alt=media&token=7a259249-a2db-4f4d-9dd2-5f0a965b5b78', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F10.mp3?alt=media&token=7a259249-a2db-4f4d-9dd2-5f0a965b5b78', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book44%2F10.mp3?alt=media&token=7a259249-a2db-4f4d-9dd2-5f0a965b5b78'],
-		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F0.mp3?alt=media&token=5f24f3ab-b9ac-4658-b0b8-8c15d75c19d5', '', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F1.mp3?alt=media&token=cd62c35d-ea32-4227-ab74-3d5335d15fb5', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F2.mp3?alt=media&token=d894c143-6d2f-42b4-8cdb-f7c91351a4eb', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F3.mp3?alt=media&token=3393d0b2-f80c-4627-8543-4bb280ab6e8b', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F4.mp3?alt=media&token=90a6956e-87f2-4f65-a509-893df5823643', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F5.mp3?alt=media&token=c6ebdca2-5d69-4b3e-b7d2-61c77bfa2476', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F6.mp3?alt=media&token=7ec61367-6c1e-457d-8049-9e4a6e19dfcf', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F7.mp3?alt=media&token=faff2e22-ba52-4daf-b24a-594bbdc7e417', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F8.mp3?alt=media&token=f1ed3c97-2af8-4f88-852d-ab45840d8674', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F9.mp3?alt=media&token=0f7f32e2-d538-4dcf-b79b-37252a3c9745', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F10.mp3?alt=media&token=b4add8a8-982d-4c1a-aa46-a426b4e222e1', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F11.mp3?alt=media&token=c4f939dd-0893-45c1-8ff2-f84e57e4abef', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F12.mp3?alt=media&token=e1e76fc8-5fbf-401a-ad59-909d4072f157', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F12.mp3?alt=media&token=e1e76fc8-5fbf-401a-ad59-909d4072f157', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F14.mp3?alt=media&token=1017e701-631f-4fba-9604-b2beb00a911b']
-
+		['https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F0.mp3?alt=media&token=5f24f3ab-b9ac-4658-b0b8-8c15d75c19d5', '', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F1.mp3?alt=media&token=cd62c35d-ea32-4227-ab74-3d5335d15fb5', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F2.mp3?alt=media&token=d894c143-6d2f-42b4-8cdb-f7c91351a4eb', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F3.mp3?alt=media&token=3393d0b2-f80c-4627-8543-4bb280ab6e8b', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F4.mp3?alt=media&token=90a6956e-87f2-4f65-a509-893df5823643', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F5.mp3?alt=media&token=c6ebdca2-5d69-4b3e-b7d2-61c77bfa2476', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F6.mp3?alt=media&token=7ec61367-6c1e-457d-8049-9e4a6e19dfcf', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F7.mp3?alt=media&token=faff2e22-ba52-4daf-b24a-594bbdc7e417', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F8.mp3?alt=media&token=f1ed3c97-2af8-4f88-852d-ab45840d8674', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F9.mp3?alt=media&token=0f7f32e2-d538-4dcf-b79b-37252a3c9745', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F10.mp3?alt=media&token=b4add8a8-982d-4c1a-aa46-a426b4e222e1', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F11.mp3?alt=media&token=c4f939dd-0893-45c1-8ff2-f84e57e4abef', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F12.mp3?alt=media&token=e1e76fc8-5fbf-401a-ad59-909d4072f157', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F13.mp3?alt=media&token=e1e76fc8-5fbf-401a-ad59-909d4072f157', 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F14.mp3?alt=media&token=1017e701-631f-4fba-9604-b2beb00a911b',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F15.mp3?alt=media&token=0f3d889f-38a3-4da9-af32-67594e8fd4d5',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F16.mp3?alt=media&token=f5a8c89f-c0e2-4330-a978-9d99d8699b78',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F17.mp3?alt=media&token=f5a8c89f-c0e2-4330-a978-9d99d8699b78',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F18.mp3?alt=media&token=8741b338-8bfd-402c-9eb3-7d71fbfb06a5',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F19.mp3?alt=media&token=4ae5af30-4cca-427c-b558-4311113b097b',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F20.mp3?alt=media&token=2f2ee8fc-6993-407c-8b12-06cf728917cc',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F21.mp3?alt=media&token=a8cee7e2-bd9f-46e9-ae60-9c93d50b2aeb',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F22.mp3?alt=media&token=fe761327-4e60-4ede-9931-837acad13339',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F23.mp3?alt=media&token=5a04b5aa-9890-4144-a7cb-6f80677284ae',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F24.mp3?alt=media&token=229e8e5f-b470-4bcd-835c-6575a4df6054',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F25.mp3?alt=media&token=3a51bb01-7a97-46df-ad55-e78dac74e38d',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F26.mp3?alt=media&token=4dac098b-f1c2-4814-ab4c-f2b653d59eb3',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F27.mp3?alt=media&token=4dc10199-47c7-469a-97c3-7a6ca48384be',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F28.mp3?alt=media&token=e719adab-3c56-4908-9c41-21859c4dc172',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F29.mp3?alt=media&token=7eff549a-0413-44de-962e-cdd1892b1b52',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F30.mp3?alt=media&token=78e3e2a1-4d1e-415d-bda6-b054d0bfaf5d',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F31.mp3?alt=media&token=475984d2-219e-495c-b6d8-044ce0b0eaf6',
+		'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book45%2F32.mp3?alt=media&token=a161f17a-515b-4f2d-b23a-dab30366e468']
 	]
 
 	@ViewChild(Nav) nav: Nav;
@@ -433,6 +450,7 @@ export class HomePage {
 	}
 	itemSelected(index) {
 		console.log(index);
+		//console.log(this.booksSound.length);
 
 		this.currentPic = 1;
 		let len = index + 1;
@@ -442,6 +460,7 @@ export class HomePage {
 		console.log(this.bookName);
 		this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
 		let book = "book" + len + "url" + index;
+		console.log(index);
 		this.myTracks[0].src = this.booksSound[index][this.currentPic - 1];
 		// this.myTracks[0].src = 'https://firebasestorage.googleapis.com/v0/b/audio-pdf-app.appspot.com/o/book2%2F2.mp3?alt=media&token=2cf1e744-b639-4dae-8a0e-9a20244a547b';
 		console.log(this.myTracks[0]);
@@ -494,6 +513,7 @@ export class HomePage {
 		}
 	}
 	prev() {
+		this.pauseSelectedTrack();
 
 		if (this.currentPic > 1) {
 			console.log(this.currentPic);
@@ -516,10 +536,11 @@ export class HomePage {
 	}
 
 	next() {
+		this.pauseSelectedTrack();
 
 		if (this.currentPic < this.books[this.audioIndex].length1) {
 
-			console.log(this.currentPic);
+			//console.log(this.booksSound[this.audioIndex][this.currentPic - 1]);
 			if (this.currentPic == 1) {
 				this.showplay = false;
 			} else {
@@ -530,7 +551,7 @@ export class HomePage {
 			this.bookLocation = "assets/books/" + this.bookName + "/" + this.currentPic + ".jpg";
 			//this.myTracks[0].src = this.booksSound[this.audioIndex][this.currentPic - 1];
 
-
+			console.log(this.booksSound[this.audioIndex][this.currentPic - 1]);
 			this.myTracks[0] = {
 				src: this.booksSound[this.audioIndex][this.currentPic - 1],
 				preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
